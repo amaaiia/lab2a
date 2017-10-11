@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="tipo_contenido" content="text/html;" http-equiv="content-type" charset="utf-8">
+	<title>Preguntas</title>
+    <link rel='stylesheet' type='text/css' href='estilos/style.css' />
+	<link rel='stylesheet' 
+		   type='text/css' 
+		   media='only screen and (min-width: 530px) and (min-device-width: 481px)'
+		   href='estilos/wide.css' />
+	<link rel='stylesheet' 
+		   type='text/css' 
+		   media='only screen and (max-width: 480px)'
+		   href='estilos/smartphone.css' />
+  </head>
+  <body>
+  <div id='page-wrap'>
+	<header class='main' id='h1'>
+		<span class="right"><a href="registro">Registrarse</a></span>
+      		<span class="right"><a href="login">Login</a></span>
+      		<span class="right" style="display:none;"><a href="/logout">Logout</a></span>
+		<h2>Quiz: el juego de las preguntas</h2>
+    </header>
+	<nav class='main' id='n1' role='navigation'>
+		<span><a href='layout.html'>Inicio</a></span>
+		<span><a href='pregunta.html'>Preguntas</a></span>
+		<span><a href='creditos.html'>Creditos</a></span>
+	</nav>
+    <section class="main" id="s1">
+    
+	<div>
+		<form id='fpreguntas' name='fpreguntas' action="prueba.php" method='POST'  onSubmit="return verificar()">
+			<p>Introduce tu correo electr&oacute;nico*:   
+			<input type='email' id = 'textoEmail' name = 'textoEmail' pattern="[a-z_]+([0-9]{3})+@(ikasle\.ehu\.)+(es|eus)+"  required> </br>
+			Escribe tu pregunta*:   
+			<input type='text' id = 'textoPregunta' name = 'textoPregunta' pattern=".{10,}" required> </br>
+			Respuesta correcta*:
+			<input type='text' id = 'textoCorrecto' name = 'textoCorrecto'  required> </br>
+			Respuesta incorrecta 1*:
+			<input type='text' id = 'textoIncorrecto1' name = 'textoIncorrecto1'  required> </br>
+			Respuestas incorrecta 2*:
+			<input type='text' id = 'textoIncorrecto2' name = 'textoIncorrecto2'  required> </br>
+			Respuestas incorrecta 3*:
+			<input type='text' id = 'textoIncorrecto3' name = 'textoIncorrecto3'  required> </br>
+			Introduce la complejidad de la pregunta del 1 al 5*:
+			<input type='text' id = 'textoComplejidad' name = 'textoComplejidad'pattern="1|2|3|4|5" required> </br>
+      Tema de la pregunta*:
+			<input type='text' id = 'textoTema' name = 'textoTema' required> </br> </p>
+			<input name="archivos" id="archivos"" type="file" size="20" accept="image/*">
+      </br> </br>
+			<input type ='submit' id="enviar" value='Enviar' class="boton"> <input type='reset' class="boton">
+		</form>
+	</div>
+    </section>
+	<footer class='main' id='f1'>
+		<p><a href="http://es.wikipedia.org/wiki/Quiz" target="_blank">Que es un Quiz?</a></p>
+		<a href='https://github.com'>Link GITHUB</a>
+	</footer>
+  </div>
+
+</body>
+</html>
